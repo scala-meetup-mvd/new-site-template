@@ -25,8 +25,8 @@
         <!-- Title Area -->
         <li class="name">
           <h1>
-            <a href="#">
-              Top Bar Title
+            <a href="#" class="logo" >
+              <img src="img/scala-mvd-logo.jpg" />
             </a>
           </h1>
         </li>
@@ -39,16 +39,6 @@
 
     <div class="row">
       <div class="large-12 columns">
-
-
-        <!-- Mobile Header -->
-
-        <div class="row">
-          <div class="large-12 columns show-for-small ">
-          </div>
-        </div><br>
-
-        <!-- End Mobile Header -->
 
 
         <div class="row">
@@ -159,7 +149,7 @@ function processMeetupEvents(resp) {
       var month = d.getMonth() + 1;
       var formatted_date = month + '/' + date;
       var name = '[' + formatted_date + '] - ' + result.name;
-      str += '<li><a href="' + event_url + '">' + name + '</a></li>'
+      str += '<li><div class="panel"><a href="' + event_url + '">' + name + '</a></div></li>'
     }
     $('#meetup-events').html(str);
   }
