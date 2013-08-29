@@ -7,7 +7,7 @@
     <!-- encoders are assigned the type
            ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
-      <pattern>%d{YYYY-MM-DD HH:mm:ss.SSS} %-5level %logger{35} - %msg%n</pattern>
+      <pattern>%d{YYYY-MM-DD HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
     </encoder>
 
   </appender>
@@ -21,7 +21,7 @@
     <!-- encoders are assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
-      <pattern>%d{YYYY-MM-DD HH:mm:ss.SSS} %X{symName} %-5level %logger{35} - %msg%n</pattern>
+      <pattern>%d{YYYY-MM-DD HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
     </encoder>
 
   </appender>
@@ -36,13 +36,13 @@
     <!-- encoders are assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
-      <pattern>%d{YYYY-MM-DD HH:mm:ss.SSS} %X{symName} %-5level %logger{35} - %msg%n</pattern>
+      <pattern>%d{YYYY-MM-DD HH:mm:ss.SSS} %-5level %logger - %msg%n</pattern>
     </encoder>
 
   </appender>
 
-  <root level="DEBUG" >
-    <appender-ref ref="FILE" />
+  <root level="INFO" >
+    <!-- appender-ref ref="FILE" /> -->
     <appender-ref ref="CONSOLE" />
   </root>
 
@@ -50,8 +50,14 @@
     <appender-ref ref="METRICS" />
   </logger>
 
-  <logger level="DEBUG" name="workers" additivity="false" >
+  <logger level="DEBUG" name="akka://scala-mvd" additivity="false" >
     <appender-ref ref="FILE" />
+    <!-- appender-ref ref="CONSOLE" / -->
+  </logger>
+
+  <logger level="DEBUG" name="scalamvd" additivity="false" >
+    <appender-ref ref="FILE" />
+    <!-- appender-ref ref="CONSOLE" / -->
   </logger>
 
 </configuration>
