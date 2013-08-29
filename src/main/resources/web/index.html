@@ -1,170 +1,140 @@
 <!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html lang="en">
+<head>
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Scala MVD</title>
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grupo de usuarios del Lenguaje Scala en Montevideo, Uruguay">
+  <meta name="author" content="federico silva <twitter.com/fedesilva> ">
 
-
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
-
-    <script src="js/vendor/custom.modernizr.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-
-  </head>
-  <body>
-
-    <!-- Navigation -->
-
-    <nav class="top-bar">
-      <ul class="title-area">
-        <!-- Title Area -->
-        <li class="name">
-          <h1>
-            <a href="#" class="logo" >
-              <img src="img/scala-mvd-logo.jpg" />
-            </a>
-          </h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-      </ul>
-
-    </nav>
-
-    <!-- End Top Bar -->
-
-    <div class="row">
-      <div class="large-12 columns">
+  <title>Scala Meetup MVD</title>
 
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="row">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css"  rel="stylesheet" media="screen">
+  <link href="css/app.css"            rel="stylesheet" media="screen">
 
-              <!-- Shows -->
-              <!-- End Shows -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="../../assets/js/html5shiv.js"></script>
+  <script src="../../assets/js/respond.min.js"></script>
+  <![endif]-->
 
-              <!-- Events -->
-              <div class="large-8 small-6 columns">
-                <section>
-                  <h1>Upcoming Events</h1>
-                  <div id="meetup-events">
-                  </div>
-                </section>
-              </div>
-              <!-- End Events -->
+</head>
+
+<body>
 
 
-              <!-- Feed -->
-              <div class="large-4 small-12 columns">
+  <div id="wrap" >
 
-                <h4>Blog</h4><hr>
-                <div class="panel">
-                  <h5><a href="#">Post Title 1</a></h5>
+    <header class="navbar navbar-default" role="banner" >
 
-                  <h6 class="subheader">
-                    Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Suspendisse ultrices ornare tempor...
-                  </h6>
+      <div class="container">
 
-                  <h6><a href="#">Read More »</a></h6>
-                </div>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
 
-                <div class="panel hide-for-small">
-                  <h5><a href="#">Post Title 2 »</a></h5>
-                </div>
+        <div class="navbar-header">
+         <a href="index.html" >
+           <p class="navbar-brand" >Scala MVD</p>
+         </a>
+        </div>
 
-                <div class="panel hide-for-small">
-                  <h5><a href="#">Post Title 3 »</a></h5>
-                </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse pull-right " role="navigation"  >
 
-                <a href="#" class="right">Go To Blog »</a>
-
-              </div>
-
-              <!-- End Feed -->
-
-            </div>
-          </div>
-
+          <ul class="nav navbar-nav pull-right " >
+            <li>
+              <a href="#scala">Acerca de Scala</a>
+            </li>
+            <li>
+              <a href="#about">Acerca de Nosotros</a>
+            </li>
+          </ul>
 
         </div>
 
-        <!-- End Content -->
-
-        <!-- Footer -->
-
-        <footer class="row">
-          <div class="large-12 columns"><hr>
-            <div class="row">
-
-              <div class="large-6 columns">
-                <p>&copy; Copyright no one at all. Go to town.</p>
-              </div>
-
-              <div class="large-6 small-12 columns">
-                <ul class="inline-list right">
-                  <li><a href="#">Link 1</a></li>
-                  <li><a href="#">Link 2</a></li>
-                  <li><a href="#">Link 3</a></li>
-                  <li><a href="#">Link 4</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-        </footer>
-
-        <!-- End Footer -->
-
       </div>
+
+    </header>
+
+    <section class="container col-md-12 content-area" id="main-content" >
+
+      <div id="presentation" class="col-md-12"  >
+       <h3>Grupo de usuarios y entusiastas del lenguaje Scala</h3>
+      </div>
+
+      <div class="col-md-8" >
+        <h4>Próximos eventos</h4>
+        <div id="events" >
+          <div id="loading-events">
+            Loading ...
+          </div>
+        </div>
+      </div>
+
+      <div id="links" class="col-md-4" >
+        <h4>
+          Links de interés
+        </h4>
+        <ol>
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>Link 3</li>
+        </ol>
+      </div>
+
+    </section>
+
+    <section class="container col-md-12 content-area" id="scala" >
+      <h3>Scala es ...</h3>
+    </section>
+
+    <section class="container col-md-12 content-area" id="about" >
+      <h3>Nosotros somos ...</h3>
+    </section>
+
+  </div>
+
+  <div id="footer" class="small"  >The Scala Meetup Group</div>
+
+<script id="eventTemplate" language="template"  >
+  <div class="panel panel-default"  >
+
+    <div class="panel-heading">
+      <a href="<%=event_url%>"><%= name %><a/> (<%= moment(time).fromNow() %>)
     </div>
 
-    <script src="js/foundation.min.js"></script>
-    <script>
+    <div class="panel-body ">
+      
+      <div class="panel panel-default panel-date" >  
+        <div class="panel-body" >
+          <%= moment(time).format("DD") %>
+        </div>
+        <div class="panel-footer" >
+          <%= moment(time).format("MMMM") %>
+        </div>
+      </div>
 
-      var group = {
-            key: "33263a2c5862f45701963501e63572",
-            eventLimit: 10,
-            photosLimit: 50,
-            url: "scala-meetup-mvd",
-            id: 6488382
-      }
+      <p><%=description%></p>
+      <p>Donde: <%=venue.name%> - <%= venue.address %></p>
 
+    </div>
 
-function processMeetupEvents(resp) {
-
-  if(resp && resp.results) {
-    var results = resp.results;
-    var str = '';
-
-    for(var i in results) {
-      var result = results[i];
-      var event_url = result.event_url;
-      var d = new Date(result.time);
-      var date  = d.getDate();
-      var month = d.getMonth() + 1;
-      var formatted_date = month + '/' + date;
-      var name = '[' + formatted_date + '] - ' + result.name;
-      str += '<div class="panel"><a href="' + event_url + '">' + name + '</a></div>'
-    }
-    $('#meetup-events').html(str);
-  }
-}
-
-$(function() {
-  var head    = document.getElementsByTagName('head')[0];
-  var script  = document.createElement('script');
-  script.id = "meetupscript"
-  script.type = 'text/javascript';
-  script.src  = 'https://api.meetup.com/2/events?key='+group.key+'&sign=true&page='+group.eventLimit+'&group_id='+group.id+'&callback=processMeetupEvents';
-  head.appendChild(script);
-});
-
+  </div>
 </script>
 
-<!-- End Footer -->
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/moment.es.js"></script>
+
+<script src="js/app.js"></script>
+
 </body>
 </html>
