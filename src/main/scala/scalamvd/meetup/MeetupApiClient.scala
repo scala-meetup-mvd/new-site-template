@@ -25,7 +25,6 @@ object MeetupApiClient {
 /** Proxies calls the meetup api and performs naive caching. */
 class MeetupApiClient(val group: GroupInfo)
   extends Actor
-    with Stash
     with MeetupHttpClient
     with ActorLogging {
 
